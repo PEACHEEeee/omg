@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Window Example</title>
+    <script>
+        function openPopup() {
+            // 打开一个新窗口，并设置初始大小和位置
+            var popup = window.open('小丑.html', '_blank', 'width=300,height=300,left=500,top=400');
+            
+            // 确保新窗口获得焦点
+            popup.focus();
+            
+            // 阻止默认行为，防止页面跳转
+            return false;
+        }
+    </script>
+    <style>
+        /* 设置无框文字的样式 */
+        .popup-trigger {
+            border: none;
+            background-color: transparent;
+            color: rgb(255, 63, 150); /* 或其他你想要的颜色 */
+            font-size: 10px; /* 或其他你想要的字体大小 */
+            position: relative; /* 使用绝对定位来放置文本 */
+            top: 0x; /* 距离顶部的位置，按需调整 */
+            left: 0px; /* 距离左侧的位置，按需调整 */
+            cursor: pointer; /* 鼠标悬停时显示点击效果 */
+            font-weight: 550;
+        }
+    </style>
+</head>
+<body>
+    <!-- 创建一段无框文字，并绑定onclick事件到openPopup函数 -->
+    <span class="popup-trigger" onclick="return openPopup();">喵</span>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前置摄像头内容</title>
+</head>
+<body>
+    <video id="cameraStream" autoplay></video>
+    <script>
+        const video = document.getElementById('cameraStream');
+        
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } })
+                .then(stream => {
+                    video.srcObject = stream;
+                })
+                .catch(error => {
+                    console.error("无法获取视频流：", error);
+                });
+        } else {
+            console.error("你的浏览器不支持获取视频流");
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            /* 设置背景图片 */
+           
+
+
+            /* 可选：设置背景颜色，当背景图片加载失败或不存在时显示 */
+            background-color: #000000;
+
+            /* 可选：设置字体颜色，确保与背景图片对比度高 */
+            color: #000000;
+
+            /* 可选：设置页边距为0，确保背景图片覆盖整个页面 */
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</body>
+</html>
+
+

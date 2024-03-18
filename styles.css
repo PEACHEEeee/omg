@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'Times New Roman', monospace; /* 使用像素风字体 */
+  color: white;
+  text-align: left;
+  overflow: hidden; /* 隐藏滚动条 */
+}
+
+#typed-text {
+  font-size: 1rem; /* 字体大小 */
+  margin-top: 20%; /* 垂直居中 */
+}
+
+#next-button {
+  display: none; /* 默认隐藏按钮 */
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.644);
+  font-size: 1rem;
+  cursor: pointer;
+}

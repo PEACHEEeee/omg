@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            /* 设置背景图片 */
+            background-image: url('2.jpg');
+
+            /* 设置背景图片不重复 */
+            background-repeat: no-repeat;
+
+            /* 设置背景图片覆盖整个页面 */
+            background-size: auto;
+
+            /* 设置背景图片位置 */
+            background-position: center top;
+
+
+            /* 可选：设置背景颜色，当背景图片加载失败或不存在时显示 */
+            background-color: #f0f0f0;
+
+            /* 可选：设置字体颜色，确保与背景图片对比度高 */
+            color: #333;
+
+            /* 可选：设置页边距为0，确保背景图片覆盖整个页面 */
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Window Example</title>
+    <script>
+        function openPopup() {
+            // 打开一个新窗口，并设置初始大小和位置
+            var popup = window.open('3.html', '_blank', 'width=1200,height=500,left=200,top=200');
+            
+            // 确保新窗口获得焦点
+            popup.focus();
+            
+            // 阻止默认行为，防止页面跳转
+            return false;
+        }
+    </script>
+    <style>
+        /* 设置无框文字的样式 */
+        .popup-trigger {
+            border: none;
+            background-color: transparent;
+            color: rgb(81, 81, 81); /* 或其他你想要的颜色 */
+            font-size: 18px; /* 或其他你想要的字体大小 */
+            position: relative; /* 使用绝对定位来放置文本 */
+            top: 570px; /* 距离顶部的位置，按需调整 */
+            left: 220px; /* 距离左侧的位置，按需调整 */
+            cursor: pointer; /* 鼠标悬停时显示点击效果 */
+            font-weight: 550;
+        }
+    </style>
+</head>
+<body>
+    <!-- 创建一段无框文字，并绑定onclick事件到openPopup函数 -->
+    <span class="popup-trigger" onclick="return openPopup();">有点变态！但可以三个月一次拿下四级！</span>
+</body>
+</html>
+
